@@ -7,5 +7,6 @@ chgrp -R 0 /app && \
 chmod -R g=u /app
 RUN bin/installDeps.sh
 EXPOSE 9001
+VOLUME [ "/app/var" ]
 USER 1000
 ENTRYPOINT [ "./bin/run.sh" ]
